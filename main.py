@@ -1,9 +1,25 @@
 from tkinter import *
-import keyboard
+import pyautogui as keyboard
+import time
 
 def spammer():
     rmsg.place(x=330,y=275)
-    print(dada,betw_msg.get(),betw_s_m.get(),len(words.get(1)),sep='\n')
+    print(words.get("1.0","end"))
+    wordslist=words.get("1.0","end").split('\n')
+    time.sleep(float(betw_s_m.get()))
+    i=0
+    if dada:
+        while i<len(wordslist):
+            keyboard.write(f"{wordslist[i]} {i}")
+            keyboard.press("enter")
+            time.sleep(float(betw_msg.get()))
+            i+=1
+    else:
+        while i<len(wordslist):
+            keyboard.write("{wordslist[i]}")
+            keyboard.press("enter")
+            time.sleep(float(betw_msg.get()))
+            i+=1
     rmsg.place_forget()
 
 def checkvarsdef():
@@ -71,12 +87,13 @@ after juct click button START""",
     START.place(x=475,y=200)
 
     
-    see_iterw = Checkbutton(window,
+    see_iterw = Checkbutton(
         text="See iterator after string",
         variable=dada,
         bg="black",
         fg="gray",
     )
+    see_iterw.pack()
     see_iterw.place(x=325, y=50)
 
     

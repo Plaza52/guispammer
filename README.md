@@ -1,2 +1,2 @@
 # guispammer
-Spammer but with gui.
+Spammer but with gui. (Use readme from old version)
