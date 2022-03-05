@@ -1,3 +1,5 @@
+#My discord is twilight#6866 and mail plazaspamer@inbox.ru Have fun!
+
 from tkinter import *
 import pyautogui as keyboard
 import time
