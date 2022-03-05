@@ -3,7 +3,7 @@ import keyboard
 
 def spammer():
     rmsg.place(x=330,y=275)
-    print(dada)
+    print(dada,betw_msg.get(),betw_s_m.get(),len(words.get(1)),sep='\n')
     rmsg.place_forget()
 
 def checkvarsdef():
@@ -45,7 +45,7 @@ def main():
 after juct click button START""",
         bg="black",
         fg="white"
-        )
+    )
     info.place(x=315,y=0)
     
     words = Text(window,
@@ -54,7 +54,7 @@ after juct click button START""",
         bg="gray",
         fg="white",
         bd=0
-        )
+    )
     words.place(x=0,y=0)
     words.focus()
 
@@ -67,7 +67,7 @@ after juct click button START""",
         fg="white",
         highlightcolor="black",
         command=spammer
-        )
+    )
     START.place(x=475,y=200)
 
     
@@ -76,7 +76,7 @@ after juct click button START""",
         variable=dada,
         bg="black",
         fg="gray",
-        )
+    )
     see_iterw.place(x=325, y=50)
 
     
@@ -84,14 +84,14 @@ after juct click button START""",
         width=10,
         bg="gray",
         fg="white",
-        )
+    )
     betw_msg.place(x=330,y=70)
 
     betw_msginfo = Label(window,
         text="Time between msg (Float)",
         bg="black",
         fg="white"
-        )
+    )
     betw_msginfo.place(x=420,y=70)
 
 
@@ -99,26 +99,26 @@ after juct click button START""",
         width=10,
         bg="gray",
         fg="white",
-        )
+    )
     betw_s_m.place(x=330,y=100)
 
     betw_s_minfo = Label(window,
         text="Time between START and first msg (Float)",
         bg="black",
         fg="white"
-        )
+    )
     betw_s_minfo.place(x=420,y=100)
 
     errormsg = Label(
         text=f"Please enter value in 1st text shield",
         fg="red",
         bg="black"
-        )
+    )
     errors_m = Label(
         text=f"Please enter value in 2nd text shield",
         fg="red",
         bg="black"
-        )
+    )
 
     checkvars = Button(
         text="CHECK VALUES",
@@ -127,13 +127,13 @@ after juct click button START""",
         width=14,
         height=3,
         command=checkvarsdef
-        )
+    )
     checkvars.place(x=330,y=200)
 
     rmsg = Label(
-    text=f"Spammer started, wait for start script",
-    bg="black",
-    fg="red",
+        text=f"Spammer started, wait for start script",
+        bg="black",
+        fg="red",
     )
     
     window.mainloop()
