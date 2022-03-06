@@ -6,23 +6,25 @@ import time
 
 def spammer():
     rmsg.place(x=330,y=275)
+    qaa.place(x=340,y=300)
     print(words.get("1.0","end"))
     wordslist=words.get("1.0","end").split('\n')
     time.sleep(float(betw_s_m.get()))
     i=0
-    if dada:
-        while i<len(wordslist):
+    if dada.get():
+        while i<(len(wordslist)-1):
             keyboard.write(f"{wordslist[i]} {i}")
             keyboard.press("enter")
             time.sleep(float(betw_msg.get()))
             i+=1
     else:
-        while i<len(wordslist):
-            keyboard.write("{wordslist[i]}")
+        while i<(len(wordslist)-1):
+            keyboard.write(f"{wordslist[i]}")
             keyboard.press("enter")
             time.sleep(float(betw_msg.get()))
             i+=1
     rmsg.place_forget()
+    qaa.place_forget()
 
 def checkvarsdef():
     try:
@@ -48,6 +50,7 @@ def main():
     global words
     global errors_m
     global errormsg
+    global qaa
     dada=IntVar()
     #see_iter=BooleanVar()
     #see_iter.set(True)
@@ -56,6 +59,12 @@ def main():
     window.resizable(width=False, height=False)
     window["bg"] = "black"
 
+    qaa = Label(
+        window,
+        text="If script don't work\ncheck values and start agin",
+        bg="black",
+        fg="red"
+        )
     
     info = Label(window,
         font=("Arial Bold",15),
